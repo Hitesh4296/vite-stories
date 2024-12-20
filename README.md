@@ -1,50 +1,36 @@
-# React + TypeScript + Vite
+# Instagram Stories Static
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a Vite + React + Tailwind CSS project, for the frontend of the Instagram Stories page,
 
-Currently, two official plugins are available:
+- with two card variants, with and without story preview.
+- with a shared story full screen preview component that can be hidden and shown.
+- story moves forward by default based on a timer of 5s
+- story moves forward by clicking on the right side of screen in preview
+- story moves backward by clicking on the left side of screen in preview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hosted as a static site on Cloudflare Pages.
 
-## Expanding the ESLint configuration
+- Steps:
+  - `npm run build` to build the project
+  - Create a new project on Cloudflare Pages
+  - Upload the build folder
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Installation
 
-- Configure the top-level `parserOptions` property like this:
+I use pnpm (Feel free to use npm or yarn if you prefer)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```bash
+pnpm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Running the project
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+```bash
+pnpm run dev
+```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Testing
+
+```bash
+pnpm run test
 ```
