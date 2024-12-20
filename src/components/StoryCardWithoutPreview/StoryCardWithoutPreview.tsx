@@ -22,6 +22,8 @@ export default function StoryCardWithoutPreview({ story }: { story: Story }) {
         }
       )}
       onClick={() => setActiveStory(story.id)}
+      data-testid="story-card-without-preview"
+      data-seen={!isSeen}
     >
       <div className="aspect-square w-full bg-gray-200 rounded-full overflow-hidden">
         <img

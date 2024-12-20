@@ -16,6 +16,7 @@ export default function StoryCardWithPreview({ story }: { story: Story }) {
     <div
       className="flex flex-col gap-[0.5rem]"
       onClick={() => setActiveStory(story.id)}
+      data-testid="story-card-with-preview"
     >
       <div className="w-[8rem] bg-gray-500 rounded-lg aspect-[3/4] flex relative overflow-hidden">
         <div className="w-full bg-gray-200">

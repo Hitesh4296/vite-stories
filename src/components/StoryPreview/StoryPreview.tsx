@@ -80,6 +80,8 @@ export default function StoryPreview({ story }: StoryPreviewProps) {
     <div
       className="fixed inset-0 h-full bg-black top-0 left-0 z-[51] items-center justify-center flex flex-col "
       key={story.id}
+      data-testid="story-preview"
+      data-story-id={story.id}
     >
       <div className="fixed top-0 w-full z-[55]">
         <div className="relative top-0 left-0 w-full z-[52] h-fit flex gap-[2px] justify-center items-center p-[2px]">

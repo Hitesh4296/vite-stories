@@ -9,7 +9,11 @@ export default function Actions() {
 
   return (
     <div className="flex gap-[1rem]">
-      <div className="cursor-pointer" onClick={hidePreview}>
+      <div
+        className="cursor-pointer"
+        onClick={hidePreview}
+        data-testid="hide-preview"
+      >
         <RxCross1 size={24} />
       </div>
     </div>
